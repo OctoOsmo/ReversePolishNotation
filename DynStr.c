@@ -8,7 +8,7 @@ DynStr* DynStrCreate()
         printf("memory allocation error in DynStrCreate\n");
         exit(1);
     }
-    DS->str = (char*)calloc(1,sizeof(char));
+    DS->str = (char *)calloc(1,sizeof(char));
     DS->len = 0;
     DS->reserve = 0;
     return DS;
