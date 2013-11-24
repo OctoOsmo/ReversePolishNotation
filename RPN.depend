@@ -1,0 +1,26 @@
+# depslib dependency file v1.0
+1385251738 source:c:\codeblocks\rpn\main.c
+	<stdio.h>
+	<stdlib.h>
+	"main.h"
+
+1384728120 source:c:\codeblocks\rpn\dynstr.c
+	"DynStr.h"
+
+1384728105 c:\codeblocks\rpn\dynstr.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1385251286 c:\codeblocks\rpn\main.h
+	"DynStr.h"
+	"CharStack.h"
+
+1385251717 source:c:\codeblocks\rpn\charstack.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"CharStack.h"
+
+1385251596 c:\codeblocks\rpn\charstack.h
+
