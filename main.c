@@ -20,5 +20,17 @@ int main()
     }
     printf("\n");
     CharStackPrint(CH->head);
+    DynStr *DS1 = DynStrCreate();
+    DS1 = DynStrAssign(DS1, "DynStr1");
+    DynStr *DS2 = DynStrCreate();
+    DS2 = DynStrAssign(DS2, "DynStr2");
+    DynStrStack *DSStack = DynStrStackCreate();
+    DynStrStackPushBack(DSStack, DS1);
+    DynStrStackPushBack(DSStack, DS2);
+    while(DSStack->head)
+    {
+        DynStrPrint(DynStrStackPop(DSStack));
+    }
+    printf("\n");
     return 0;
 }

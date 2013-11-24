@@ -39,6 +39,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="DynStr.h" />
+		<Unit filename="DynStrStack.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="DynStrStack.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>

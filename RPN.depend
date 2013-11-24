@@ -24,3 +24,35 @@
 
 1385251596 c:\codeblocks\rpn\charstack.h
 
+1385251717 source:c:\codeblocks\reversepolishnotation\charstack.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"CharStack.h"
+
+1385251596 c:\codeblocks\reversepolishnotation\charstack.h
+
+1384728120 source:c:\codeblocks\reversepolishnotation\dynstr.c
+	"DynStr.h"
+
+1384728105 c:\codeblocks\reversepolishnotation\dynstr.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1385280842 source:c:\codeblocks\reversepolishnotation\main.c
+	<stdio.h>
+	<stdlib.h>
+	"main.h"
+
+1385280702 c:\codeblocks\reversepolishnotation\main.h
+	"DynStr.h"
+	"CharStack.h"
+	"DynStrStack.h"
+
+1385280470 source:c:\codeblocks\reversepolishnotation\dynstrstack.c
+	"DynStrStack.h"
+
+1385279869 c:\codeblocks\reversepolishnotation\dynstrstack.h
+	"DynStr.h"
+
