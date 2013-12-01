@@ -32,37 +32,10 @@ int ComparePrior(char a, char b)//compare operations prioritys
     return NULL;
 }
 
-int main()
+DynStrStack *ToPolish(char *str)
 {
-//    printf("Hello world!\n");
-//    DynStr *DS = DynStrCreate();
-//    DS = DynStrPushBack(DS, '!');
-//    DynStrPrint(DS);
     CharStack *CH = CharStackCreate();
-//    CharStackPushBack(CH, '1');
-//    CharStackPushBack(CH, '2');
-//    CharStackPushBack(CH, '3');
-//    CharStackPushBack(CH, '4');
-//    CharStackPrint(CH->head);
-//    while(CH->head)
-//    {
-//        printf("%c ", CharStackPop(CH));
-//    }
-//    printf("\n");
-//    CharStackPrint(CH->head);
-//    DynStr *DS1 = DynStrCreate();
-//    DS1 = DynStrAssign(DS1, "DynStr1");
-//    DynStr *DS2 = DynStrCreate();
-//    DS2 = DynStrAssign(DS2, "DynStr2");
     DynStrStack *DSStack = DynStrStackCreate();
-//    DynStrStackPushBack(DSStack, DS1);
-//    DynStrStackPushBack(DSStack, DS2);
-//    while(DSStack->head)
-//    {
-//        DynStrPrint(DynStrStackPop(DSStack));
-//    }
-//    printf("\n");
-    char *str = "(3+4-3)";
     size_t  i;
     DynStr *DS = DynStrCreate();
     for(i=0; i<strlen(str); ++i)
@@ -89,9 +62,11 @@ int main()
             break;
         default:
             if(DS&&DS->len > 0)
+            {
                 DS = DynStrPushBack(DS, '\0');
-            DynStrStackPushBack(DSStack, DS);
-            DS = NULL;
+                DynStrStackPushBack(DSStack, DS);
+                DS = NULL;
+            }
         }
         switch(str[i])
         {
@@ -128,11 +103,15 @@ int main()
         case '/':
             while(CH->head&&(GetOperPrior(str[i]) <= GetOperPrior(CH->head->c)))
             {
+                if(!DS)
+                    DS = DynStrCreate();
                 DS = DynStrPushBack(DS, CharStackPop(CH));
+                DS = DynStrPushBack(DS, '\0');
                 DynStrStackPushBack(DSStack, DS);
                 DS = NULL;
             }
             CharStackPushBack(CH, str[i]);
+//            CharStackPrint(CH->head);
             break;
 //        default:
 //            printf("something goes whrong\n");
@@ -147,9 +126,19 @@ int main()
         DynStrStackPushBack(DSStack, DS);
         DS = NULL;
     }
+    return DSStack;
+}
+
+int main()
+{
+    char *str = "(3/15.5+(4)*2/(1-5)/21.4235)";
+    DynStrStack *DSStack;
+    DSStack = ToPolish(str);
+    DynStr *p;
     while(DSStack->head)
     {
-        DynStrPrint(DynStrStackPop(DSStack));
+        p = DynStrStackPop(DSStack);
+        DynStrPrint(p);
     }
     printf("\n");
     return 0;

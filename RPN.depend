@@ -24,7 +24,7 @@
 
 1385251596 c:\codeblocks\rpn\charstack.h
 
-1385251717 source:c:\codeblocks\reversepolishnotation\charstack.c
+1385851978 source:c:\codeblocks\reversepolishnotation\charstack.c
 	<stdlib.h>
 	<stdio.h>
 	<string.h>
@@ -32,7 +32,7 @@
 
 1385251596 c:\codeblocks\reversepolishnotation\charstack.h
 
-1385330792 source:c:\codeblocks\reversepolishnotation\dynstr.c
+1385852830 source:c:\codeblocks\reversepolishnotation\dynstr.c
 	"DynStr.h"
 
 1384728105 c:\codeblocks\reversepolishnotation\dynstr.h
@@ -40,7 +40,7 @@
 	<stdlib.h>
 	<string.h>
 
-1385417283 source:c:\codeblocks\reversepolishnotation\main.c
+1385895952 source:c:\codeblocks\reversepolishnotation\main.c
 	<stdio.h>
 	<stdlib.h>
 	"main.h"
